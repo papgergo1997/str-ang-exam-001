@@ -1,1 +1,26 @@
-<p>heroes works!</p>
+<div class="container mt-5">
+    <div class="form-group">
+        <label for="name" class="mb-3">SEARCH HERO BY NAME</label>
+        <input id="name" type="text" [(ngModel)]="filterKey" class="form-control mb-4">
+    </div>
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>SuperPower</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let hero of heroList | filter:filterKey">
+                    <td>{{hero.id}}</td>
+                    <td>{{hero.name}}</td>
+                    <td>{{hero.superPower}}</td>
+                    <td>{{hero.address}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
