@@ -7,14 +7,11 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>SuperPower</th>
-                    <th>Address</th>
+                    <th class="table-head" *ngFor="let col of cols" (click)="onChangeSort(col.key)">{{col.text}}</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let hero of heroList | filter:filterKey">
+                <tr *ngFor="let hero of heroList | filter:filterKey | sort:sortKey">
                     <td>{{hero.id}}</td>
                     <td>{{hero.name}}</td>
                     <td>{{hero.superPower}}</td>
