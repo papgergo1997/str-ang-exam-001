@@ -9,6 +9,7 @@ import { HeroesComponent } from './common/heroes/heroes.component';
 import { FilterPipe } from './pipe/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { SortPipe } from './pipe/sort.pipe';
+import { HeroCardComponent } from './common/hero-card/hero-card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SortPipe } from './pipe/sort.pipe';
     HomeComponent,
     HeroesComponent,
     FilterPipe,
-    SortPipe
+    SortPipe,
+    HeroCardComponent
   ],
   imports: [
     BrowserModule,
