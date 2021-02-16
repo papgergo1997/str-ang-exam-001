@@ -1,2 +1,4 @@
 <header class="header__home"></header>
-<app-hero-card *ngFor="let hero of heroList" [hero]="hero"></app-hero-card>
+<div class="row col-12 mx-auto">
+    <app-hero-card *ngFor="let hero of heroList" [hero]="hero" class="py-2 px-4 mx-auto"></app-hero-card>
+</div>
